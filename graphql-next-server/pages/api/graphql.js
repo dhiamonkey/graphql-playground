@@ -3,18 +3,16 @@ import { ApolloServer, gql } from "apollo-server-micro";
 //TODO fix typeDefs and resolvers
 const typeDefs = gql`
   type Query {
-    hello: String!
+    hello: String
   }
 `;
-
 const resolvers = {
   Query: {
     hello: () => {
-      return "hello";
+      return "Hello World!";
     },
   },
 };
-
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
